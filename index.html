@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deanco Power Washing | Lancaster County, PA</title>
+
+  <!-- Link Preview / Open Graph Tags -->
+  <meta property="og:title" content="Deanco Power Washing | Lancaster County, PA" />
+  <meta property="og:description" content="Professional power washing for driveways, siding, decks & more. Owner-operated, fully insured. Free quotes!" />
+  <meta property="og:url" content="https://deancopowerwashing.com" />
+  <meta property="og:type" content="website" />
+  <meta name="apple-mobile-web-app-title" content="Deanco Power Washing" />
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,7 +76,6 @@
       padding-left: 2px;
     }
 
-    /* Desktop nav links */
     .nav-links {
       display: flex;
       gap: 2rem;
@@ -117,7 +124,6 @@
       transform-origin: center;
     }
 
-    /* Animate hamburger → X when open */
     .hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -126,7 +132,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 80px; /* below nav */
+      top: 80px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -140,9 +146,7 @@
       overflow-y: auto;
     }
 
-    .mobile-menu.open {
-      transform: translateX(0);
-    }
+    .mobile-menu.open { transform: translateX(0); }
 
     .mobile-menu a {
       display: block;
@@ -157,11 +161,7 @@
       transition: color 0.2s, padding-left 0.2s;
     }
 
-    .mobile-menu a:hover {
-      color: var(--orange);
-      padding-left: 8px;
-    }
-
+    .mobile-menu a:hover { color: var(--orange); padding-left: 8px; }
     .mobile-menu a:last-child { border-bottom: none; }
 
     .mobile-menu .mobile-cta {
@@ -181,10 +181,7 @@
       border-bottom: none !important;
     }
 
-    .mobile-menu .mobile-cta:hover {
-      background: var(--orange-hover);
-      padding-left: 28px;
-    }
+    .mobile-menu .mobile-cta:hover { background: var(--orange-hover); padding-left: 28px; }
 
     .mobile-menu-footer {
       margin-top: auto;
@@ -267,10 +264,7 @@
       cursor: pointer;
     }
 
-    .btn-primary:hover {
-      background: var(--orange-hover);
-      transform: translateY(-2px);
-    }
+    .btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); }
 
     /* ─── TRUST BAR ─── */
     #trust-bar {
@@ -348,10 +342,7 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
 
     .service-icon { font-size: 2rem; margin-bottom: 16px; }
 
@@ -381,12 +372,7 @@
     .why-text { flex: 1 1 380px; }
     .why-list { flex: 1 1 340px; }
 
-    .why-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
+    .why-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
 
     .why-icon {
       background: var(--navy);
@@ -474,10 +460,7 @@
       transition: transform 0.15s, box-shadow 0.2s;
     }
 
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
 
     /* ─── CONTACT ─── */
     #contact { background: var(--light-gray); }
@@ -492,12 +475,7 @@
 
     .contact-info { flex: 1 1 260px; }
 
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
+    .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 
     .contact-detail .ci-icon {
       background: var(--navy);
@@ -512,11 +490,7 @@
       flex-shrink: 0;
     }
 
-    .contact-detail span {
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
+    .contact-detail span { font-size: 0.95rem; color: var(--text-dark); font-weight: 600; }
 
     .contact-form { flex: 1 1 380px; }
 
@@ -550,9 +524,7 @@
 
     .form-group input:focus,
     .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--orange);
-    }
+    .form-group select:focus { border-color: var(--orange); }
 
     .form-group textarea { resize: vertical; min-height: 110px; }
 
@@ -569,16 +541,13 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 640px) {
-      /* Hide desktop links, show hamburger */
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
-
       #hero { min-height: 80vh; }
       section { padding: 60px 5%; }
     }
 
-    /* Prevent body scroll when menu is open */
     body.menu-open { overflow: hidden; }
   </style>
 </head>
@@ -596,7 +565,6 @@
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <!-- Hamburger button (mobile only) -->
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -749,78 +717,68 @@
   </section>
 
   <!-- CONTACT FORM -->
-<section id="contact">
-  <div class="contact-wrapper">
-    <div class="contact-info">
-      <div class="section-label">Get In Touch</div>
-      <h2>Request a Free Quote</h2>
-      <p class="section-sub" style="margin-bottom:32px">We respond within 24 hours. No obligation, no pressure.</p>
-      
-      <div class="contact-detail">
-        <div class="ci-icon">📞</div>
-        <span>(717) 220-3425</span>
+  <section id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h2>Request a Free Quote</h2>
+        <p class="section-sub" style="margin-bottom:32px">We respond within 24 hours. No obligation, no pressure.</p>
+        <div class="contact-detail">
+          <div class="ci-icon">📞</div>
+          <span>(717) 220-3425</span>
+        </div>
+        <div class="contact-detail">
+          <div class="ci-icon">✉️</div>
+          <span>info@deancopowerwashing.com</span>
+        </div>
+        <div class="contact-detail">
+          <div class="ci-icon">📍</div>
+          <span>Lancaster County, PA</span>
+        </div>
       </div>
-      <div class="contact-detail">
-        <div class="ci-icon">✉️</div>
-        <span>info@deancopowerwashing.com</span>
-      </div>
-      <div class="contact-detail">
-        <div class="ci-icon">📍</div>
-        <span>Lancaster County, PA</span>
+
+      <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="efec2a28-52a5-45e5-9255-ed946ab3f085">
+          <input type="hidden" name="subject" value="New Quote Request - Deanco Power Washing">
+
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(717) 555-0100" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select name="service" required>
+              <option value="">— Select a service —</option>
+              <option>Driveway / Walkway</option>
+              <option>House Siding</option>
+              <option>Deck / Patio</option>
+              <option>Fence</option>
+              <option>Gutter Cleaning</option>
+              <option>Multiple / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your project</label>
+            <textarea name="message" placeholder="Describe what needs cleaning, property size, any special concerns..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">
+            Send My Request →
+          </button>
+
+        </form>
       </div>
     </div>
-
-    <div class="contact-form">
-      <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <!-- Web3Forms Settings -->
-        <input type="hidden" name="access_key" value="efec2a28-52a5-45e5-9255-ed946ab3f085">
-        <input type="hidden" name="subject" value="New Quote Request - Deanco Power Washing">
-        
-        <!-- Optional: Redirect after submission -->
-        <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
-
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" placeholder="John Smith" required>
-        </div>
-
-        <div class="form-group">
-          <label>Phone Number</label>
-          <input type="tel" name="phone" placeholder="(717) 555-0100" required>
-        </div>
-
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" placeholder="you@email.com" required>
-        </div>
-
-        <div class="form-group">
-          <label>Service Needed</label>
-          <select name="service" required>
-            <option value="">— Select a service —</option>
-            <option>Driveway / Walkway</option>
-            <option>House Siding</option>
-            <option>Deck / Patio</option>
-            <option>Fence</option>
-            <option>Gutter Cleaning</option> 
-            <option>Multiple / Not Sure</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Tell us about your project</label>
-          <textarea name="message" placeholder="Describe what needs cleaning, property size, any special concerns..." rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">
-          Send My Request →
-        </button>
-
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -851,12 +809,8 @@
       hamburger.classList.contains('open') ? closeMenu() : openMenu();
     });
 
-    // Close when a nav link is tapped
-    navLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-    // Close on outside tap (the overlay behind the menu)
     document.addEventListener('click', (e) => {
       if (mobileMenu.classList.contains('open') &&
           !mobileMenu.contains(e.target) &&
