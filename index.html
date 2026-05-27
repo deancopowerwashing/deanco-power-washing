@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deanco Power Washing | Lancaster County, PA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1b2a4a;
+      --navy-dark: #111e35;
+      --orange: #e87722;
+      --orange-hover: #cf6510;
+      --white: #ffffff;
+      --light-gray: #f5f6f8;
+      --text-dark: #1a1a2e;
+      --text-muted: #5a6275;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 80px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--white);
+      letter-spacing: 2px;
+    }
+
+    .nav-logo .brand span { color: var(--orange); }
+
+    .nav-logo .sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--orange);
+      text-transform: uppercase;
+      margin-top: 2px;
+      padding-left: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    /* ─── HERO ─── */
+    #hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a3f6a 100%);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-content { position: relative; max-width: 780px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(232,119,34,0.2);
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    #hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    #hero h1 span { color: var(--orange); }
+
+    #hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,0.8);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ─── TRUST BAR ─── */
+    #trust-bar {
+      background: var(--orange);
+      padding: 18px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 40px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+
+    .trust-item span.icon { font-size: 1.1rem; }
+
+    /* ─── SECTIONS SHARED ─── */
+    section { padding: 90px 5%; }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 50px;
+    }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--light-gray); text-align: center; }
+    #services h2, #services .section-label { text-align: center; }
+    #services .section-sub { margin-left: auto; margin-right: auto; text-align: center; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 36px 28px;
+      text-align: left;
+      border-top: 4px solid var(--orange);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .service-icon { font-size: 2rem; margin-bottom: 16px; }
+
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ─── WHY US ─── */
+    #why {
+      background: var(--white);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #why-section { padding: 90px 5%; background: var(--white); }
+
+    .why-text { flex: 1 1 380px; }
+    .why-list { flex: 1 1 340px; }
+
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .why-icon {
+      background: var(--navy);
+      color: var(--orange);
+      font-size: 1.2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-item h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .why-item p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials { background: var(--navy); text-align: center; }
+    #testimonials h2 { color: var(--white); }
+    #testimonials .section-label { color: var(--orange); }
+    #testimonials .section-sub { color: rgba(255,255,255,0.65); margin-left: auto; margin-right: auto; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 32px 28px;
+      text-align: left;
+    }
+
+    .stars { color: var(--orange); font-size: 1.1rem; margin-bottom: 14px; }
+
+    .testimonial-card p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .reviewer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--orange);
+    }
+
+    /* ─── CTA SECTION ─── */
+    #cta {
+      background: linear-gradient(135deg, var(--orange) 0%, #cf6510 100%);
+      text-align: center;
+      padding: 90px 5%;
+    }
+
+    #cta h2 { color: var(--white); }
+    #cta p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 16px auto 36px; max-width: 520px; line-height: 1.7; }
+
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--orange);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--light-gray); }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-info { flex: 1 1 260px; }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-detail .ci-icon {
+      background: var(--navy);
+      color: var(--orange);
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-detail span {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .contact-form { flex: 1 1 380px; }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #dde1ea;
+      border-radius: 4px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--orange);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 28px 5%;
+      font-size: 0.85rem;
+    }
+
+    footer strong { color: var(--orange); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      #hero { min-height: 80vh; }
+      section { padding: 60px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="brand">DEAN<span>C</span>O</div>
+      <div class="sub">Power Washing</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-section">About</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">📍 Lancaster County, PA</div>
+      <h1>Lancaster County's<br/><span>Trusted</span> Power Washing Pros</h1>
+      <p>Owner-operated and fully insured — Deanco Power Washing restores your home's curb appeal with professional results you can see.</p>
+      <a href="#contact" class="btn-primary">Get My Free Quote →</a>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div id="trust-bar">
+    <div class="trust-item"><span class="icon">⭐</span> 5-Star Rated</div>
+    <div class="trust-item"><span class="icon">🛡️</span> Licensed & Insured</div>
+    <div class="trust-item"><span class="icon">🏠</span> Owner-Operated</div>
+    <div class="trust-item"><span class="icon">📍</span> Serving Lancaster County, PA</div>
+    <div class="trust-item"><span class="icon">💵</span> Free Quotes</div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label">What We Clean</div>
+    <h2>Our Services</h2>
+    <p class="section-sub">From driveways to decks, we handle it all with professional-grade equipment and eco-friendly solutions.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <h3>Driveways & Walkways</h3>
+        <p>Blast away oil stains, dirt, and years of buildup from concrete and pavers for a clean, fresh finish.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏡</div>
+        <h3>House Siding</h3>
+        <p>Gentle soft-wash treatments that remove grime, mildew, and algae without harming your paint or finish.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌿</div>
+        <h3>Decks & Patios</h3>
+        <p>Restore wood and composite surfaces to their original beauty, safely and without damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪵</div>
+        <h3>Fences</h3>
+        <p>Strip away mildew, algae, and discoloration — giving your fence a clean, like-new appearance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Gutters</h3>
+        <p>Brighten your roofline and protect against water damage with a thorough exterior gutter clean.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why-section">
+    <div id="why">
+      <div class="why-text">
+        <div class="section-label">Why Deanco</div>
+        <h2>Why Lancaster County Homeowners Choose Us</h2>
+        <p class="section-sub" style="margin-bottom:0">When you hire Deanco Power Washing, you're hiring an owner who shows up personally and takes pride in every single job. We've built our reputation in Lancaster County one driveway, one deck, one satisfied homeowner at a time.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-icon">🏆</div>
+          <div>
+            <h4>Owner on Every Job</h4>
+            <p>You get hands-on experience, not a subcontractor. Dean shows up, does the work, and makes sure you're happy.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🛡️</div>
+          <div>
+            <h4>Fully Licensed & Insured</h4>
+            <p>Your property is always protected. We carry full insurance so you never have to worry.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⭐</div>
+          <div>
+            <h4>5-Star Track Record</h4>
+            <p>Our reviews speak for themselves — consistent quality and professionalism on every job.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🌿</div>
+          <div>
+            <h4>Eco-Friendly Solutions</h4>
+            <p>Safe for your family, pets, and landscaping. We use biodegradable, low-impact cleaning agents.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💵</div>
+          <div>
+            <h4>Transparent Pricing</h4>
+            <p>No hidden fees, ever. You'll know exactly what you're paying before we start.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-label">Customer Reviews</div>
+    <h2>What Our Customers Are Saying</h2>
+    <p class="section-sub">Real homeowners, real results — right here in Lancaster County.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Deanco did an incredible job on our driveway and back patio. Professional, on time, and the results were night and day. Highly recommend!"</p>
+        <div class="reviewer">— Lancaster County Homeowner</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Our siding looks brand new. Dean was respectful of our property and got everything done in just a few hours. Will definitely be calling again."</p>
+        <div class="reviewer">— Lancaster County Homeowner</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Best decision we made this spring. Fair price, great communication, and the deck looks amazing. 10/10 would recommend to anyone."</p>
+        <div class="reviewer">— Lancaster County Homeowner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="cta">
+    <h2>Ready for a Cleaner Home?</h2>
+    <p>It takes just a minute to get started. Tell us about your property and we'll get back to you with a free, no-obligation quote — typically within 24 hours.</p>
+    <a href="#contact" class="btn-white">Request My Free Quote →</a>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h2>Request a Free Quote</h2>
+        <p class="section-sub" style="margin-bottom:32px">We respond within 24 hours. No obligation, no pressure.</p>
+        <div class="contact-detail">
+          <div class="ci-icon">📞</div>
+          <span>(XXX) XXX-XXXX</span>
+        </div>
+        <div class="contact-detail">
+          <div class="ci-icon">✉️</div>
+          <span>info@deancowashing.com</span>
+        </div>
+        <div class="contact-detail">
+          <div class="ci-icon">📍</div>
+          <span>Lancaster County, PA</span>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Smith" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(717) 555-0100" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">— Select a service —</option>
+            <option>Driveway / Walkway</option>
+            <option>House Siding</option>
+            <option>Deck / Patio</option>
+            <option>Fence</option>
+            <option>Gutters</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell us about your project</label>
+          <textarea placeholder="Describe what needs cleaning, property size, any special concerns..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;font-size:1rem;">Send My Request →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Deanco Power Washing</strong> — Proudly serving Lancaster County, PA homeowners since 2026.</p>
+    <p style="margin-top:6px;">© 2026 Deanco Power Washing. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
