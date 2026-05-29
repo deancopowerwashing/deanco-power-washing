@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deanco Power Washing | Lancaster County, PA</title>
 
-  <!-- Link Preview / Open Graph Tags -->
   <meta property="og:title" content="Deanco Power Washing | Lancaster County, PA" />
   <meta property="og:description" content="Professional power washing for driveways, siding, decks & more. Owner-operated, fully insured. Free quotes!" />
   <meta property="og:url" content="https://deancopowerwashing.com" />
@@ -49,11 +48,7 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
 
-    .nav-logo {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; }
 
     .nav-logo .brand {
       font-family: 'Montserrat', sans-serif;
@@ -76,11 +71,7 @@
       padding-left: 2px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
 
     .nav-links a {
       color: var(--white);
@@ -94,19 +85,15 @@
 
     .nav-links a:hover { color: var(--orange); }
 
-    /* ─── HAMBURGER BUTTON ─── */
+    /* ─── HAMBURGER ─── */
     .hamburger {
       display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 44px;
-      height: 44px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      gap: 5px;
-      padding: 6px;
+      width: 44px; height: 44px;
+      background: none; border: none;
+      cursor: pointer; gap: 5px; padding: 6px;
       border-radius: 6px;
       transition: background 0.2s;
       z-index: 200;
@@ -115,11 +102,8 @@
     .hamburger:hover { background: rgba(255,255,255,0.1); }
 
     .hamburger .bar {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
+      display: block; width: 24px; height: 2px;
+      background: var(--white); border-radius: 2px;
       transition: transform 0.3s ease, opacity 0.3s ease;
       transform-origin: center;
     }
@@ -132,10 +116,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 80px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 80px; left: 0; right: 0; bottom: 0;
       background: var(--navy-dark);
       z-index: 99;
       flex-direction: column;
@@ -149,12 +130,10 @@
     .mobile-menu.open { transform: translateX(0); }
 
     .mobile-menu a {
-      display: block;
-      color: var(--white);
+      display: block; color: var(--white);
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
+      font-weight: 700; font-size: 1.5rem;
       letter-spacing: 1px;
       padding: 16px 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -167,16 +146,12 @@
     .mobile-menu .mobile-cta {
       margin-top: 32px;
       display: inline-block;
-      background: var(--orange);
-      color: var(--white);
+      background: var(--orange); color: var(--white);
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
+      font-weight: 700; font-size: 1rem;
       letter-spacing: 1px;
-      padding: 16px 28px;
-      border-radius: 4px;
-      text-decoration: none;
-      text-align: center;
+      padding: 16px 28px; border-radius: 4px;
+      text-decoration: none; text-align: center;
       transition: background 0.2s;
       border-bottom: none !important;
     }
@@ -184,10 +159,8 @@
     .mobile-menu .mobile-cta:hover { background: var(--orange-hover); padding-left: 28px; }
 
     .mobile-menu-footer {
-      margin-top: auto;
-      padding-top: 32px;
-      color: rgba(255,255,255,0.35);
-      font-size: 0.8rem;
+      margin-top: auto; padding-top: 32px;
+      color: rgba(255,255,255,0.35); font-size: 0.8rem;
     }
 
     .mobile-menu-footer strong { color: var(--orange); }
@@ -196,19 +169,14 @@
     #hero {
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a3f6a 100%);
       min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       text-align: center;
       padding: 80px 5%;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
 
     #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
@@ -220,12 +188,9 @@
       border: 1px solid var(--orange);
       color: var(--orange);
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 20px;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 20px;
       margin-bottom: 24px;
     }
 
@@ -233,8 +198,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
       font-size: clamp(2.2rem, 5vw, 3.8rem);
-      color: var(--white);
-      line-height: 1.15;
+      color: var(--white); line-height: 1.15;
       margin-bottom: 20px;
     }
 
@@ -243,48 +207,36 @@
     #hero p {
       font-size: clamp(1rem, 2vw, 1.2rem);
       color: rgba(255,255,255,0.8);
-      max-width: 580px;
-      margin: 0 auto 36px;
+      max-width: 580px; margin: 0 auto 36px;
       line-height: 1.7;
     }
 
     .btn-primary {
       display: inline-block;
-      background: var(--orange);
-      color: var(--white);
+      background: var(--orange); color: var(--white);
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
+      font-weight: 700; font-size: 1rem;
       letter-spacing: 1px;
-      padding: 16px 36px;
-      border-radius: 4px;
+      padding: 16px 36px; border-radius: 4px;
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
-      border: none;
-      cursor: pointer;
+      border: none; cursor: pointer;
     }
 
     .btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); }
 
     /* ─── TRUST BAR ─── */
     #trust-bar {
-      background: var(--orange);
-      padding: 18px 5%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px 40px;
+      background: var(--orange); padding: 18px 5%;
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 20px 40px;
     }
 
     .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; align-items: center; gap: 8px;
       color: var(--white);
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
+      font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px;
     }
 
     .trust-item span.icon { font-size: 1.1rem; }
@@ -294,28 +246,22 @@
 
     .section-label {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 12px;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 12px;
     }
 
     h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      color: var(--navy);
-      line-height: 1.2;
+      color: var(--navy); line-height: 1.2;
       margin-bottom: 16px;
     }
 
     .section-sub {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.7;
+      font-size: 1.05rem; color: var(--text-muted);
+      max-width: 560px; line-height: 1.7;
       margin-bottom: 50px;
     }
 
@@ -327,16 +273,12 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
+      gap: 24px; max-width: 1100px; margin: 0 auto;
     }
 
     .service-card {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 36px 28px;
-      text-align: left;
+      background: var(--white); border-radius: 8px;
+      padding: 36px 28px; text-align: left;
       border-top: 4px solid var(--orange);
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       transition: transform 0.2s, box-shadow 0.2s;
@@ -348,10 +290,8 @@
 
     .service-card h3 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--navy);
-      margin-bottom: 10px;
+      font-weight: 700; font-size: 1.05rem;
+      color: var(--navy); margin-bottom: 10px;
     }
 
     .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
@@ -359,12 +299,9 @@
     /* ─── WHY US ─── */
     #why {
       background: var(--white);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 60px;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      gap: 60px; align-items: center;
+      max-width: 1200px; margin: 0 auto;
     }
 
     #why-section { padding: 90px 5%; background: var(--white); }
@@ -375,24 +312,17 @@
     .why-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
 
     .why-icon {
-      background: var(--navy);
-      color: var(--orange);
-      font-size: 1.2rem;
-      width: 48px;
-      height: 48px;
+      background: var(--navy); color: var(--orange);
+      font-size: 1.2rem; width: 48px; height: 48px;
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
 
     .why-item h4 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--navy);
-      margin-bottom: 4px;
+      font-weight: 700; font-size: 0.95rem;
+      color: var(--navy); margin-bottom: 4px;
     }
 
     .why-item p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
@@ -406,41 +336,33 @@
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 24px; max-width: 1000px; margin: 0 auto;
     }
 
     .testimonial-card {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 32px 28px;
-      text-align: left;
+      border-radius: 8px; padding: 32px 28px; text-align: left;
     }
 
     .stars { color: var(--orange); font-size: 1.1rem; margin-bottom: 14px; }
 
     .testimonial-card p {
       color: rgba(255,255,255,0.85);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
+      font-size: 0.95rem; line-height: 1.7;
+      margin-bottom: 20px; font-style: italic;
     }
 
     .reviewer {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
+      font-weight: 700; font-size: 0.85rem;
       color: var(--orange);
     }
 
     /* ─── CTA SECTION ─── */
     #cta {
       background: linear-gradient(135deg, var(--orange) 0%, #cf6510 100%);
-      text-align: center;
-      padding: 90px 5%;
+      text-align: center; padding: 90px 5%;
     }
 
     #cta h2 { color: var(--white); }
@@ -448,14 +370,11 @@
 
     .btn-white {
       display: inline-block;
-      background: var(--white);
-      color: var(--orange);
+      background: var(--white); color: var(--orange);
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
+      font-weight: 700; font-size: 1rem;
       letter-spacing: 1px;
-      padding: 16px 36px;
-      border-radius: 4px;
+      padding: 16px 36px; border-radius: 4px;
       text-decoration: none;
       transition: transform 0.15s, box-shadow 0.2s;
     }
@@ -466,11 +385,8 @@
     #contact { background: var(--light-gray); }
 
     .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 60px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      gap: 60px; max-width: 1000px; margin: 0 auto;
     }
 
     .contact-info { flex: 1 1 260px; }
@@ -478,16 +394,10 @@
     .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 
     .contact-detail .ci-icon {
-      background: var(--navy);
-      color: var(--orange);
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
+      background: var(--navy); color: var(--orange);
+      width: 44px; height: 44px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
     }
 
     .contact-detail span { font-size: 0.95rem; color: var(--text-dark); font-weight: 600; }
@@ -499,27 +409,20 @@
     .form-group label {
       display: block;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 6px;
+      font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 6px;
     }
 
     .form-group input,
     .form-group textarea,
     .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 2px solid #dde1ea;
-      border-radius: 4px;
+      width: 100%; padding: 12px 16px;
+      border: 2px solid #dde1ea; border-radius: 4px;
       font-family: 'Open Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text-dark);
+      font-size: 0.95rem; color: var(--text-dark);
       background: var(--white);
-      transition: border-color 0.2s;
-      outline: none;
+      transition: border-color 0.2s; outline: none;
     }
 
     .form-group input:focus,
@@ -528,16 +431,135 @@
 
     .form-group textarea { resize: vertical; min-height: 110px; }
 
+    /* ─── THANK YOU MESSAGE ─── */
+    .thank-you {
+      display: none;
+      background: var(--white);
+      border-radius: 8px;
+      border-top: 4px solid var(--orange);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 48px 36px;
+      text-align: center;
+    }
+
+    .thank-you.visible { display: block; }
+
+    .thank-you-icon {
+      width: 64px; height: 64px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 20px;
+    }
+
+    .thank-you h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900; font-size: 1.5rem;
+      color: var(--navy); margin-bottom: 12px;
+    }
+
+    .thank-you p {
+      font-size: 0.95rem; color: var(--text-muted);
+      line-height: 1.7; max-width: 360px; margin: 0 auto 24px;
+    }
+
+    .thank-you .ty-detail {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--light-gray);
+      border-radius: 4px; padding: 10px 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700; font-size: 0.85rem;
+      color: var(--navy);
+    }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--navy-dark);
       color: rgba(255,255,255,0.55);
       text-align: center;
-      padding: 28px 5%;
+      padding: 36px 5%;
       font-size: 0.85rem;
     }
 
     footer strong { color: var(--orange); }
+
+    /* ─── FOOTER SOCIAL LINKS ─── */
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px; height: 42px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .social-link svg {
+      width: 18px; height: 18px;
+      fill: rgba(255,255,255,0.7);
+      transition: fill 0.2s;
+    }
+
+    .social-link:hover svg { fill: var(--white); }
+
+    .footer-divider {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 0 auto 20px;
+    }
+
+    /* ─── STICKY CALL BUTTON ─── */
+    .sticky-call {
+      display: none; /* shown only on mobile via media query */
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 998;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(232,119,34,0.5);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+      white-space: nowrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sticky-call:hover {
+      background: var(--orange-hover);
+      transform: translateX(-50%) translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232,119,34,0.6);
+    }
+
+    .sticky-call.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-50%) translateY(12px);
+    }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 640px) {
@@ -546,12 +568,21 @@
       .mobile-menu { display: flex; }
       #hero { min-height: 80vh; }
       section { padding: 60px 5%; }
+      /* Show sticky call button on mobile only */
+      .sticky-call { display: flex; }
+      /* Extra bottom padding so content isn't hidden behind sticky button */
+      body { padding-bottom: 80px; }
     }
 
     body.menu-open { overflow: hidden; }
   </style>
 </head>
 <body>
+
+  <!-- STICKY CALL BUTTON (mobile only) -->
+  <a href="tel:+17172203425" class="sticky-call" id="stickyCall">
+    📞 Call Now — (717) 220-3425
+  </a>
 
   <!-- NAV -->
   <nav>
@@ -738,8 +769,9 @@
       </div>
 
       <div class="contact-form">
-        <form action="https://api.web3forms.com/submit" method="POST">
 
+        <!-- FORM -->
+        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="efec2a28-52a5-45e5-9255-ed946ab3f085">
           <input type="hidden" name="subject" value="New Quote Request - Deanco Power Washing">
 
@@ -784,19 +816,43 @@
           <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">
             Send My Request →
           </button>
-
         </form>
+
+        <!-- THANK YOU MESSAGE (shown after submit) -->
+        <div class="thank-you" id="thankYou">
+          <div class="thank-you-icon">✅</div>
+          <h3>Request Received!</h3>
+          <p>Thanks for reaching out — Jon will get back to you within 24 hours with your free quote.</p>
+          <div class="ty-detail">📞 Need it faster? Call (717) 220-3425</div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
+    <div class="footer-social">
+      <!-- Facebook -->
+      <a href="https://facebook.com/deancopowerwashing" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com/deancopowerwashing" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-divider"></div>
     <p><strong>Deanco Power Washing</strong> — Proudly serving Lancaster County and surrounding areas since 2026.</p>
     <p style="margin-top:6px;">© 2026 Deanco Power Washing. All rights reserved.</p>
   </footer>
 
   <script>
+    // ─── HAMBURGER MENU ───
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const navLinks = document.querySelectorAll('.mobile-nav-link');
@@ -826,6 +882,51 @@
           !mobileMenu.contains(e.target) &&
           !hamburger.contains(e.target)) {
         closeMenu();
+      }
+    });
+
+    // ─── STICKY CALL BUTTON: hide when contact section is visible ───
+    const stickyCall = document.getElementById('stickyCall');
+    const contactSection = document.getElementById('contact');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          stickyCall.classList.add('hidden');
+        } else {
+          stickyCall.classList.remove('hidden');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observer.observe(contactSection);
+
+    // ─── FORM SUBMISSION: show thank-you inline ───
+    const form = document.getElementById('quoteForm');
+    const thankYou = document.getElementById('thankYou');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          thankYou.classList.add('visible');
+          // Scroll thank-you into view smoothly
+          thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          // Fallback: let the form submit normally if fetch fails
+          form.submit();
+        }
+      } catch {
+        form.submit();
       }
     });
   </script>
