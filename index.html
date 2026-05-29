@@ -862,6 +862,7 @@
       mobileMenu.classList.add('open');
       document.body.classList.add('menu-open');
       hamburger.setAttribute('aria-expanded', 'true');
+      stickyCall.classList.add('hidden');
     }
 
     function closeMenu() {
@@ -869,6 +870,7 @@
       mobileMenu.classList.remove('open');
       document.body.classList.remove('menu-open');
       hamburger.setAttribute('aria-expanded', 'false');
+      stickyCall.classList.remove('hidden');
     }
 
     hamburger.addEventListener('click', () => {
