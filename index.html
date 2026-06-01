@@ -3,13 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deanco Power Washing | Lancaster County, PA</title>
 
-  <meta property="og:title" content="Deanco Power Washing | Lancaster County, PA" />
-  <meta property="og:description" content="Professional power washing for driveways, siding, decks & more. Owner-operated, fully insured. Free quotes!" />
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Power Washing Lancaster County PA | Deanco Power Washing</title>
+  <meta name="description" content="Professional power washing in Lancaster County, PA. Driveways, house siding, decks, fences & gutters. Owner-operated, fully insured. Free quotes — call (717) 220-3425." />
+  <meta name="keywords" content="power washing Lancaster County PA, pressure washing Lancaster PA, driveway cleaning Lancaster PA, soft wash siding Lancaster PA, deck cleaning Lancaster PA, fence cleaning Lancaster PA, gutter cleaning Lancaster PA, power washing Lititz PA, power washing Ephrata PA, power washing Elizabethtown PA, power washing Manheim PA, power washing Mount Joy PA" />
+  <link rel="canonical" href="https://deancopowerwashing.com" />
+
+  <!-- ═══ GEO / LOCAL ═══ -->
+  <meta name="geo.region" content="US-PA" />
+  <meta name="geo.placename" content="Lancaster County, Pennsylvania" />
+
+  <!-- ═══ OPEN GRAPH (Facebook / social sharing) ═══ -->
+  <meta property="og:title" content="Power Washing Lancaster County PA | Deanco Power Washing" />
+  <meta property="og:description" content="Owner-operated power washing for driveways, siding, decks & more in Lancaster County, PA. Fully insured. Free quotes!" />
   <meta property="og:url" content="https://deancopowerwashing.com" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Power Washing Lancaster County PA | Deanco Power Washing" />
+  <meta name="twitter:description" content="Owner-operated power washing for driveways, siding, decks & more in Lancaster County, PA. Free quotes!" />
+
   <meta name="apple-mobile-web-app-title" content="Deanco Power Washing" />
+
+  <!-- ═══ LOCAL BUSINESS STRUCTURED DATA (JSON-LD) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Deanco Power Washing",
+    "description": "Professional power washing services in Lancaster County, PA including driveway cleaning, house siding soft wash, deck and patio cleaning, fence cleaning, and gutter cleaning. Owner-operated and fully insured.",
+    "url": "https://deancopowerwashing.com",
+    "telephone": "+17172203425",
+    "email": "info@deancopowerwashing.com",
+    "priceRange": "$$",
+    "areaServed": [
+      { "@type": "City", "name": "Lancaster", "sameAs": "https://en.wikipedia.org/wiki/Lancaster,_Pennsylvania" },
+      { "@type": "City", "name": "Lititz" },
+      { "@type": "City", "name": "Ephrata" },
+      { "@type": "City", "name": "Elizabethtown" },
+      { "@type": "City", "name": "Manheim" },
+      { "@type": "City", "name": "Mount Joy" },
+      { "@type": "AdministrativeArea", "name": "Lancaster County, Pennsylvania" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "PA",
+      "addressCountry": "US",
+      "addressLocality": "Lancaster County"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Power Washing Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Driveway & Walkway Power Washing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Siding Soft Wash" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck & Patio Power Washing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fence Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Cleaning" } }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/19aC7TxWix/",
+      "https://instagram.com/deancopowerwashing"
+    ]
+  }
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
@@ -327,6 +388,190 @@
 
     .why-item p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
 
+    /* ─── GALLERY ─── */
+    #gallery {
+      background: var(--light-gray);
+      text-align: center;
+      padding: 90px 5%;
+    }
+
+    #gallery h2, #gallery .section-label { text-align: center; }
+    #gallery .section-sub { margin-left: auto; margin-right: auto; text-align: center; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.14);
+    }
+
+    /* ── Slider container ── */
+    .ba-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: ew-resize;
+      user-select: none;
+      background: #ccc;
+    }
+
+    .ba-slider img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    /* "After" is the base layer (full width, always visible) */
+    .ba-after { z-index: 1; }
+
+    /* "Before" clips from the left, revealed by slider */
+    .ba-before {
+      z-index: 2;
+      clip-path: inset(0 50% 0 0); /* default: 50/50 */
+    }
+
+    /* Divider line */
+    .ba-divider {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: var(--white);
+      z-index: 3;
+      transform: translateX(-50%);
+      pointer-events: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    /* Handle knob */
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 4;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px;
+      background: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+      display: flex; align-items: center; justify-content: center;
+      pointer-events: none;
+    }
+
+    .ba-handle svg {
+      width: 22px; height: 22px;
+      fill: var(--navy);
+    }
+
+    /* Labels */
+    .ba-label {
+      position: absolute;
+      top: 12px;
+      z-index: 5;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    .ba-label-before {
+      left: 12px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .ba-label-after {
+      right: 12px;
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    /* Placeholder state (no images yet) */
+    .ba-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #eaecf0;
+      gap: 10px;
+      color: var(--text-muted);
+    }
+
+    .ba-placeholder .ph-icon {
+      font-size: 2.4rem;
+      opacity: 0.5;
+    }
+
+    .ba-placeholder p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    /* Card footer */
+    .gallery-card-footer {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+    }
+
+    .gallery-card-footer .gc-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--navy);
+    }
+
+    .gallery-card-footer .gc-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(232,119,34,0.12);
+      color: var(--orange);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* Add photo upload hint (visible only in edit/placeholder state) */
+    .ba-upload-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 8px 16px 12px;
+      font-style: italic;
+    }
+
     /* ─── TESTIMONIALS ─── */
     #testimonials { background: var(--navy); text-align: center; }
     #testimonials h2 { color: var(--white); }
@@ -484,7 +729,6 @@
 
     footer strong { color: var(--orange); }
 
-    /* ─── FOOTER SOCIAL LINKS ─── */
     .footer-social {
       display: flex;
       justify-content: center;
@@ -527,7 +771,7 @@
 
     /* ─── STICKY CALL BUTTON ─── */
     .sticky-call {
-      display: none; /* shown only on mobile via media query */
+      display: none;
       position: fixed;
       bottom: 20px;
       left: 50%;
@@ -568,10 +812,9 @@
       .mobile-menu { display: flex; }
       #hero { min-height: 80vh; }
       section { padding: 60px 5%; }
-      /* Show sticky call button on mobile only */
       .sticky-call { display: flex; }
-      /* Extra bottom padding so content isn't hidden behind sticky button */
       #contact { padding-bottom: 80px; }
+      .gallery-grid { grid-template-columns: 1fr; }
     }
 
     body.menu-open { overflow: hidden; }
@@ -594,6 +837,7 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#why-section">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -608,6 +852,7 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
     <a href="#services" class="mobile-nav-link">Services</a>
     <a href="#why-section" class="mobile-nav-link">About</a>
+    <a href="#gallery" class="mobile-nav-link">Gallery</a>
     <a href="#testimonials" class="mobile-nav-link">Reviews</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <a href="#contact" class="mobile-cta mobile-nav-link">Get a Free Quote →</a>
@@ -621,7 +866,7 @@
     <div class="hero-content">
       <div class="hero-badge">📍 Lancaster County, PA</div>
       <h1>Lancaster County's<br/><span>Trusted</span> Power Washing Company</h1>
-      <p>Owner-operated and fully insured — Deanco Power Washing restores your home's curb appeal with professional results you can see.</p>
+      <p>Owner-operated and fully insured — Deanco Power Washing provides professional power washing in Lancaster County, PA. Driveways, siding, decks, and more. Results you can see.</p>
       <a href="#contact" class="btn-primary">Get My Free Quote →</a>
     </div>
   </section>
@@ -638,32 +883,32 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="section-label">What We Clean</div>
-    <h2>Our Services</h2>
-    <p class="section-sub">From driveways to decks, we handle it all with professional-grade equipment and eco-friendly solutions.</p>
+    <h2>Power Washing Services in Lancaster County, PA</h2>
+    <p class="section-sub">From driveways to decks, Deanco Power Washing handles it all with professional-grade equipment and eco-friendly solutions across Lancaster County.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🚗</div>
-        <h3>Driveways & Walkways</h3>
+        <h3>Driveway & Walkway Power Washing</h3>
         <p>Blast away oil stains, dirt, and years of buildup from concrete and pavers for a clean, fresh finish.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🏡</div>
-        <h3>House Siding</h3>
+        <h3>House Siding Soft Wash</h3>
         <p>Gentle soft-wash treatments that remove grime, mildew, and algae without harming your paint or finish.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🌿</div>
-        <h3>Decks & Patios</h3>
+        <h3>Deck & Patio Power Washing</h3>
         <p>Restore wood and composite surfaces to their original beauty, safely and without damage.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🪵</div>
-        <h3>Fences</h3>
+        <h3>Fence Cleaning</h3>
         <p>Strip away mildew, algae, and discoloration — giving your fence a clean, like-new appearance.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🏗️</div>
-        <h3>Gutters</h3>
+        <h3>Gutter Cleaning Lancaster PA</h3>
         <p>Brighten your roofline and protect against water damage with a thorough exterior gutter clean.</p>
       </div>
     </div>
@@ -674,8 +919,8 @@
     <div id="why">
       <div class="why-text">
         <div class="section-label">Why Deanco</div>
-        <h2>Why Lancaster County Homeowners Choose Us</h2>
-        <p class="section-sub" style="margin-bottom:0">When you hire Deanco Power Washing, you're hiring an owner who shows up personally and takes pride in every single job. We've built our reputation in Lancaster County one driveway, one deck, one satisfied homeowner at a time.</p>
+        <h2>Why Lancaster County Homeowners Choose Deanco Power Washing</h2>
+        <p class="section-sub" style="margin-bottom:0">When you hire Deanco Power Washing, you're hiring an owner who shows up personally and takes pride in every job. We've built our reputation across Lancaster County — from Lititz to Elizabethtown, Ephrata to Manheim — one driveway, one deck, one satisfied homeowner at a time.</p>
       </div>
       <div class="why-list">
         <div class="why-item">
@@ -717,26 +962,94 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════
+       BEFORE / AFTER GALLERY
+  ════════════════════════════════════════ -->
+  <section id="gallery">
+    <div class="section-label">Our Work</div>
+    <h2>Before &amp; After Power Washing Results</h2>
+    <p class="section-sub">Drag the slider on each photo to reveal the transformation. Real power washing jobs on real Lancaster County properties.</p>
+
+    <div class="gallery-grid">
+
+      <!-- CARD 1 -->
+      <div class="gallery-card">
+        <div class="ba-slider" data-slider>
+          <!-- Replace src values with your actual image paths -->
+          <img class="ba-after"  src="gallery/driveway-after.jpg"  alt="Driveway after power washing">
+          <img class="ba-before" src="gallery/driveway-before.jpg" alt="Driveway before power washing">
+          <div class="ba-divider"></div>
+          <div class="ba-handle">
+            <svg viewBox="0 0 24 24"><path d="M8 5l-7 7 7 7V5zm8 0v14l7-7-7-7z"/></svg>
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+        <div class="gallery-card-footer">
+          <span class="gc-label">Concrete Driveway</span>
+          <span class="gc-tag">Lancaster, PA</span>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="gallery-card">
+        <div class="ba-slider" data-slider>
+          <img class="ba-after"  src="gallery/siding-after.jpg"  alt="House siding after soft wash">
+          <img class="ba-before" src="gallery/siding-before.jpg" alt="House siding before soft wash">
+          <div class="ba-divider"></div>
+          <div class="ba-handle">
+            <svg viewBox="0 0 24 24"><path d="M8 5l-7 7 7 7V5zm8 0v14l7-7-7-7z"/></svg>
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+        <div class="gallery-card-footer">
+          <span class="gc-label">House Siding</span>
+          <span class="gc-tag">Lancaster, PA</span>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="gallery-card">
+        <div class="ba-slider" data-slider>
+          <img class="ba-after"  src="gallery/deck-after.jpg"  alt="Deck after power washing">
+          <img class="ba-before" src="gallery/deck-before.jpg" alt="Deck before power washing">
+          <div class="ba-divider"></div>
+          <div class="ba-handle">
+            <svg viewBox="0 0 24 24"><path d="M8 5l-7 7 7 7V5zm8 0v14l7-7-7-7z"/></svg>
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+        <div class="gallery-card-footer">
+          <span class="gc-label">Wood Deck</span>
+          <span class="gc-tag">Lancaster, PA</span>
+        </div>
+      </div>
+
+    </div><!-- /.gallery-grid -->
+  </section>
+
   <!-- TESTIMONIALS -->
   <section id="testimonials">
     <div class="section-label">Customer Reviews</div>
-    <h2>What Our Customers Are Saying</h2>
-    <p class="section-sub">Real homeowners, real results — right here in Lancaster County.</p>
+    <h2>What Lancaster County Homeowners Are Saying</h2>
+    <p class="section-sub">Real homeowners, real power washing results — right here in Lancaster County.</p>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"Deanco did an incredible job on our driveway and back patio. He is the best. Professional, on time, and the results were night and day. Highly recommend!"</p>
-        <div class="reviewer">— Lancaster County Homeowner</div>
+        <p>"Great job! The deck came out really nice. It was better than I expected"</p>
+        <div class="reviewer">— Amber W.</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"Our siding looks brand new. Jon was respectful of our property and got everything done in just a few hours. Will definitely be calling again."</p>
-        <div class="reviewer">— Lancaster County Homeowner</div>
+        <p>"Jon did an awesome job on my house, patio/deck, shed & rental property. His attention to detail shows on the final results."</p>
+        <div class="reviewer">— LuEllen M.</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"Best decision we made this spring. Fair price, great communication, and the deck looks amazing. 10/10 would recommend to anyone."</p>
-        <div class="reviewer">— Lancaster County Homeowner</div>
+        <p>"Jon did an amazing job. He is definitely worth calling for your pressure washing needs."</p>
+        <div class="reviewer">— Luann E.</div>
       </div>
     </div>
   </section>
@@ -770,8 +1083,6 @@
       </div>
 
       <div class="contact-form">
-
-        <!-- FORM -->
         <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="efec2a28-52a5-45e5-9255-ed946ab3f085">
           <input type="hidden" name="subject" value="New Quote Request - Deanco Power Washing">
@@ -819,14 +1130,12 @@
           </button>
         </form>
 
-        <!-- THANK YOU MESSAGE (shown after submit) -->
         <div class="thank-you" id="thankYou">
           <div class="thank-you-icon">✅</div>
           <h3>Request Received!</h3>
           <p>Thanks for reaching out — we will get back to you within 24 hours.</p>
           <div class="ty-detail">📞 Need a faster response? Call (717) 220-3425</div>
         </div>
-
       </div>
     </div>
   </section>
@@ -834,13 +1143,11 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-social">
-      <!-- Facebook -->
       <a href="https://www.facebook.com/share/19aC7TxWix/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
         </svg>
       </a>
-      <!-- Instagram -->
       <a href="https://instagram.com/deancopowerwashing" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -848,7 +1155,7 @@
       </a>
     </div>
     <div class="footer-divider"></div>
-    <p><strong>Deanco Power Washing</strong> — Proudly serving Lancaster County and surrounding areas since 2026.</p>
+    <p><strong>Deanco Power Washing</strong> — Professional power washing serving Lancaster, Lititz, Ephrata, Elizabethtown, Manheim, Mount Joy, and all of Lancaster County, PA since 2026.</p>
     <p style="margin-top:6px;">© 2026 Deanco Power Washing. All rights reserved.</p>
   </footer>
 
@@ -857,6 +1164,7 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const navLinks = document.querySelectorAll('.mobile-nav-link');
+    const stickyCall = document.getElementById('stickyCall');
 
     function openMenu() {
       hamburger.classList.add('open');
@@ -889,7 +1197,6 @@
     });
 
     // ─── STICKY CALL BUTTON: hide when contact section is visible ───
-    const stickyCall = document.getElementById('stickyCall');
     const contactSection = document.getElementById('contact');
 
     const observer = new IntersectionObserver((entries) => {
@@ -904,33 +1211,53 @@
 
     observer.observe(contactSection);
 
-    // ─── FORM SUBMISSION: show thank-you inline ───
+    // ─── FORM SUBMISSION ───
     const form = document.getElementById('quoteForm');
     const thankYou = document.getElementById('thankYou');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
       const formData = new FormData(form);
-
       try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: formData
-        });
-
+        const res = await fetch(form.action, { method: 'POST', body: formData });
         if (res.ok) {
           form.style.display = 'none';
           thankYou.classList.add('visible');
-          // Scroll thank-you into view smoothly
           thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-          // Fallback: let the form submit normally if fetch fails
           form.submit();
         }
       } catch {
         form.submit();
       }
+    });
+
+    // ─── BEFORE / AFTER SLIDERS ───
+    document.querySelectorAll('[data-slider]').forEach(slider => {
+      const before   = slider.querySelector('.ba-before');
+      const divider  = slider.querySelector('.ba-divider');
+      const handle   = slider.querySelector('.ba-handle');
+      let dragging   = false;
+
+      function setPosition(x) {
+        const rect   = slider.getBoundingClientRect();
+        let pct      = (x - rect.left) / rect.width;
+        pct          = Math.max(0.02, Math.min(0.98, pct));
+        const pctPx  = (pct * 100).toFixed(2);
+        before.style.clipPath  = `inset(0 ${(100 - pct * 100).toFixed(2)}% 0 0)`;
+        divider.style.left     = pctPx + '%';
+        handle.style.left      = pctPx + '%';
+      }
+
+      // Mouse
+      slider.addEventListener('mousedown', e => { dragging = true; setPosition(e.clientX); });
+      window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
+      window.addEventListener('mouseup',   ()  => { dragging = false; });
+
+      // Touch
+      slider.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener('touchmove',  e => { if (dragging) setPosition(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener('touchend',   ()  => { dragging = false; });
     });
   </script>
 
