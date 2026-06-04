@@ -3,32 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- ═══ PRIMARY SEO ═══ -->
   <title>Power Washing Lancaster County PA | Deanco Power Washing</title>
   <meta name="description" content="Professional power washing in Lancaster County, PA. Driveways, house siding, decks, fences & gutters. Owner-operated, fully insured. Free quotes — call (717) 220-3425." />
   <meta name="keywords" content="power washing Lancaster County PA, pressure washing Lancaster PA, driveway cleaning Lancaster PA, soft wash siding Lancaster PA, deck cleaning Lancaster PA, fence cleaning Lancaster PA, gutter cleaning Lancaster PA, power washing Lititz PA, power washing Ephrata PA, power washing Elizabethtown PA, power washing Manheim PA, power washing Mount Joy PA" />
   <link rel="canonical" href="https://deancopowerwashing.com" />
-
-  <!-- ═══ GEO / LOCAL ═══ -->
   <meta name="geo.region" content="US-PA" />
   <meta name="geo.placename" content="Lancaster County, Pennsylvania" />
-
-  <!-- ═══ OPEN GRAPH (Facebook / social sharing) ═══ -->
   <meta property="og:title" content="Power Washing Lancaster County PA | Deanco Power Washing" />
   <meta property="og:description" content="Owner-operated power washing for driveways, siding, decks & more in Lancaster County, PA. Fully insured. Free quotes!" />
   <meta property="og:url" content="https://deancopowerwashing.com" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
-
-  <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Power Washing Lancaster County PA | Deanco Power Washing" />
-  <meta name="twitter:description" content="Owner-operated power washing for driveways, siding, decks & more in . Free quotes!" />
-
+  <meta name="twitter:description" content="Owner-operated power washing for driveways, siding, decks & more in Lancaster County, PA. Free quotes!" />
   <meta name="apple-mobile-web-app-title" content="Deanco Power Washing" />
 
-  <!-- ═══ LOCAL BUSINESS STRUCTURED DATA (JSON-LD) ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,6 +29,10 @@
     "telephone": "+17172203425",
     "email": "info@deancopowerwashing.com",
     "priceRange": "$$",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"12:00"}
+    ],
     "areaServed": [
       { "@type": "City", "name": "Lancaster", "sameAs": "https://en.wikipedia.org/wiki/Lancaster,_Pennsylvania" },
       { "@type": "City", "name": "Lititz" },
@@ -62,7 +56,8 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Siding Soft Wash" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck & Patio Power Washing" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fence Cleaning" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Cleaning" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Power Washing" } }
       ]
     },
     "sameAs": [
@@ -419,7 +414,6 @@
       box-shadow: 0 10px 36px rgba(0,0,0,0.14);
     }
 
-    /* ── Slider container ── */
     .ba-slider {
       position: relative;
       width: 100%;
@@ -439,16 +433,13 @@
       pointer-events: none;
     }
 
-    /* "After" is the base layer (full width, always visible) */
     .ba-after { z-index: 1; }
 
-    /* "Before" clips from the left, revealed by slider */
     .ba-before {
       z-index: 2;
-      clip-path: inset(0 50% 0 0); /* default: 50/50 */
+      clip-path: inset(0 50% 0 0);
     }
 
-    /* Divider line */
     .ba-divider {
       position: absolute;
       top: 0; bottom: 0;
@@ -461,7 +452,6 @@
       box-shadow: 0 0 8px rgba(0,0,0,0.4);
     }
 
-    /* Handle knob */
     .ba-handle {
       position: absolute;
       top: 50%;
@@ -481,7 +471,6 @@
       fill: var(--navy);
     }
 
-    /* Labels */
     .ba-label {
       position: absolute;
       top: 12px;
@@ -508,34 +497,6 @@
       color: var(--white);
     }
 
-    /* Placeholder state (no images yet) */
-    .ba-placeholder {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #eaecf0;
-      gap: 10px;
-      color: var(--text-muted);
-    }
-
-    .ba-placeholder .ph-icon {
-      font-size: 2.4rem;
-      opacity: 0.5;
-    }
-
-    .ba-placeholder p {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.55;
-    }
-
-    /* Card footer */
     .gallery-card-footer {
       padding: 16px 20px;
       display: flex;
@@ -561,15 +522,6 @@
       color: var(--orange);
       padding: 4px 10px;
       border-radius: 20px;
-    }
-
-    /* Add photo upload hint (visible only in edit/placeholder state) */
-    .ba-upload-hint {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-      padding: 8px 16px 12px;
-      font-style: italic;
     }
 
     /* ─── TESTIMONIALS ─── */
@@ -769,40 +721,110 @@
       margin: 0 auto 20px;
     }
 
-    /* ─── STICKY CALL BUTTON ─── */
-    .sticky-call {
+    /* ─── HOURS OF OPERATION ─── */
+    .footer-hours {
+      margin: 0 auto 24px;
+      max-width: 320px;
+    }
+
+    .footer-hours h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 16px;
+      text-align: left;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hours-grid .day {
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+    }
+
+    .hours-grid .time {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hours-grid .closed {
+      color: rgba(255,255,255,0.3);
+      font-style: italic;
+    }
+
+    /* ─── STICKY CALL + TEXT BUTTONS (mobile only) ─── */
+    .sticky-buttons {
       display: none;
       position: fixed;
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 998;
+      gap: 10px;
+      align-items: center;
+      transition: opacity 0.3s, transform 0.3s;
+      white-space: nowrap;
+    }
+
+    .sticky-buttons.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-50%) translateY(12px);
+    }
+
+    .sticky-call {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       background: var(--orange);
       color: var(--white);
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       letter-spacing: 0.5px;
-      padding: 14px 28px;
+      padding: 13px 22px;
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 4px 20px rgba(232,119,34,0.5);
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.3s;
-      white-space: nowrap;
-      align-items: center;
-      gap: 8px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
 
     .sticky-call:hover {
       background: var(--orange-hover);
-      transform: translateX(-50%) translateY(-2px);
+      transform: translateY(-2px);
       box-shadow: 0 8px 28px rgba(232,119,34,0.6);
     }
 
-    .sticky-call.hidden {
-      opacity: 0;
-      pointer-events: none;
-      transform: translateX(-50%) translateY(12px);
+    .sticky-text {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      padding: 13px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(27,42,74,0.5);
+      border: 2px solid rgba(255,255,255,0.15);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .sticky-text:hover {
+      background: #263d6b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(27,42,74,0.6);
     }
 
     /* ─── RESPONSIVE ─── */
@@ -812,8 +834,8 @@
       .mobile-menu { display: flex; }
       #hero { min-height: 80vh; }
       section { padding: 60px 5%; }
-      .sticky-call { display: flex; }
-      #contact { padding-bottom: 80px; }
+      .sticky-buttons { display: flex; }
+      #contact { padding-bottom: 90px; }
       .gallery-grid { grid-template-columns: 1fr; }
     }
 
@@ -822,10 +844,15 @@
 </head>
 <body>
 
-  <!-- STICKY CALL BUTTON (mobile only) -->
-  <a href="tel:+17172203425" class="sticky-call" id="stickyCall">
-    📞 Call Now
-  </a>
+  <!-- STICKY CALL + TEXT BUTTONS (mobile only) -->
+  <div class="sticky-buttons" id="stickyButtons">
+    <a href="tel:+17172203425" class="sticky-call">
+      📞 Call Now
+    </a>
+    <a href="sms:+17172203425?body=Hi%20Deanco%20Power%20Washing!%20I%27d%20like%20to%20get%20a%20free%20quote%20for%20my%20property." class="sticky-text">
+      💬 Text Us
+    </a>
+  </div>
 
   <!-- NAV -->
   <nav>
@@ -909,7 +936,12 @@
       <div class="service-card">
         <div class="service-icon">🍂</div>
         <h3>Gutter Cleaning</h3>
-        <p>We remove leaves, sticks, and debris from your gutters to prevent clogs, and protect your home from water damage.</p>
+        <p>Removal of leaves, sticks, and debris from your gutters to prevent clogs, and protect your home from water damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial Cleaning</h3>
+        <p>Professional power washing for businesses, storefronts, parking lots, and commercial properties. Keep your business looking its best.</p>
       </div>
     </div>
   </section>
@@ -962,9 +994,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       BEFORE / AFTER GALLERY
-  ════════════════════════════════════════ -->
+  <!-- BEFORE / AFTER GALLERY -->
   <section id="gallery">
     <div class="section-label">Our Work</div>
     <h2>Before &amp; After Power Washing Results</h2>
@@ -975,7 +1005,6 @@
       <!-- CARD 1 -->
       <div class="gallery-card">
         <div class="ba-slider" data-slider>
-          <!-- Replace src values with your actual image paths -->
           <img class="ba-after"  src="gallery/porch-after.jpg"  alt="Porch after power washing">
           <img class="ba-before" src="gallery/porch-before.jpg" alt="Porch before power washing">
           <div class="ba-divider"></div>
@@ -1027,7 +1056,7 @@
         </div>
       </div>
 
-    </div><!-- /.gallery-grid -->
+    </div>
   </section>
 
   <!-- TESTIMONIALS -->
@@ -1118,6 +1147,7 @@
               <option>Deck / Patio</option>
               <option>Fence</option>
               <option>Gutter Cleaning</option>
+              <option>Commercial Cleaning</option>
               <option>Multiple / Not Sure</option>
             </select>
           </div>
@@ -1154,6 +1184,22 @@
         </svg>
       </a>
     </div>
+
+    <!-- HOURS OF OPERATION -->
+    <div class="footer-hours">
+      <h4>🕐 Hours of Operation</h4>
+      <div class="hours-grid">
+        <span class="day">Mon – Thu</span>
+        <span class="time">8:00 AM – 5:00 PM</span>
+        <span class="day">Friday</span>
+        <span class="time">8:00 AM – 12:00 PM</span>
+        <span class="day">Saturday</span>
+        <span class="closed">Closed</span>
+        <span class="day">Sunday</span>
+        <span class="closed">Closed</span>
+      </div>
+    </div>
+
     <div class="footer-divider"></div>
     <p><strong>Deanco Power Washing</strong> — Professional power washing serving Lancaster, Lititz, Ephrata, Elizabethtown, Manheim, Mount Joy, and all of Lancaster County, PA since 2026.</p>
     <p style="margin-top:6px;">© 2026 Deanco Power Washing. All rights reserved.</p>
@@ -1164,14 +1210,14 @@
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const navLinks = document.querySelectorAll('.mobile-nav-link');
-    const stickyCall = document.getElementById('stickyCall');
+    const stickyButtons = document.getElementById('stickyButtons');
 
     function openMenu() {
       hamburger.classList.add('open');
       mobileMenu.classList.add('open');
       document.body.classList.add('menu-open');
       hamburger.setAttribute('aria-expanded', 'true');
-      stickyCall.classList.add('hidden');
+      stickyButtons.classList.add('hidden');
     }
 
     function closeMenu() {
@@ -1179,7 +1225,7 @@
       mobileMenu.classList.remove('open');
       document.body.classList.remove('menu-open');
       hamburger.setAttribute('aria-expanded', 'false');
-      stickyCall.classList.remove('hidden');
+      stickyButtons.classList.remove('hidden');
     }
 
     hamburger.addEventListener('click', () => {
@@ -1196,15 +1242,15 @@
       }
     });
 
-    // ─── STICKY CALL BUTTON: hide when contact section is visible ───
+    // ─── STICKY BUTTONS: hide when contact section is visible ───
     const contactSection = document.getElementById('contact');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          stickyCall.classList.add('hidden');
+          stickyButtons.classList.add('hidden');
         } else {
-          stickyCall.classList.remove('hidden');
+          stickyButtons.classList.remove('hidden');
         }
       });
     }, { threshold: 0.15 });
