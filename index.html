@@ -1302,7 +1302,7 @@
 
       // Touch
       slider.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
-      window.addEventListener('touchmove',  e => { if (dragging) setPosition(e.touches[0].clientX); }, { passive: true });
+      slider.addEventListener('touchmove',  e => { if (dragging) { e.preventDefault(); setPosition(e.touches[0].clientX); } }, { passive: false });
       window.addEventListener('touchend',   ()  => { dragging = false; });
     });
   </script>
