@@ -888,6 +888,7 @@
       #hero { min-height: 80vh; }
       section { padding: 60px 5%; }
       .sticky-buttons { display: flex; }
+      #why { flex-direction: column; align-items: center; }
       #contact { padding-bottom: 90px; }
       .gallery-grid { grid-template-columns: 1fr; }
     }
@@ -1009,6 +1010,13 @@
   <!-- WHY US -->
   <section id="why-section">
     <div id="why">
+      <div style="flex:0 0 220px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <div style="width:200px;height:200px;border-radius:50%;overflow:hidden;border:4px solid var(--orange);box-shadow:0 4px 20px rgba(0,0,0,0.10);background:#f0f0f0;">
+          <img src="jon-headshot.jpg" alt="Jonathan Dean — Owner, Deanco Power Washing" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.95rem;color:var(--navy);text-align:center;">Jonathan Dean</div>
+        <div style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:var(--orange);font-weight:600;text-align:center;margin-top:-6px;">Owner &amp; Operator</div>
+      </div>
       <div class="why-text">
         <div class="section-label">Why Deanco</div>
         <h2>Why Local Homeowners Choose Deanco</h2>
