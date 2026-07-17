@@ -680,6 +680,8 @@
 
     .form-group textarea { resize: vertical; min-height: 110px; }
 
+    .required-mark { color: #d92d20; margin-left: 3px; }
+
     /* ─── THANK YOU MESSAGE ─── */
     .thank-you {
       display: none;
@@ -1256,23 +1258,23 @@
           <input type="hidden" name="subject" value="New Quote Request - Deanco Power Washing">
 
           <div class="form-group">
-            <label>Your Name</label>
+            <label>Your Name<span class="required-mark">*</span></label>
             <input type="text" name="name" placeholder="John Smith" required>
           </div>
           <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="(717) 555-0100" required>
+            <label>Phone Number<span class="required-mark">*</span></label>
+            <input type="tel" name="phone" placeholder="(717) 555-0100" pattern="[0-9\s\-\(\)]{10,}" inputmode="tel" title="Please enter a valid phone number (digits only)" required>
           </div>
           <div class="form-group">
-            <label>Email Address</label>
+            <label>Email Address<span class="required-mark">*</span></label>
             <input type="email" name="email" placeholder="you@email.com" required>
           </div>
           <div class="form-group">
-            <label>Property Address / Zip Code</label>
+            <label>Property Address / Zip Code<span class="required-mark">*</span></label>
             <input type="text" name="property_address" placeholder="123 Main St, Ephrata, PA 17522" required>
           </div>
           <div class="form-group">
-            <label>Preferred Contact Method</label>
+            <label>Preferred Contact Method<span class="required-mark">*</span></label>
             <select name="preferred_contact" required>
               <option value="">— Select a method —</option>
               <option>Text</option>
@@ -1282,7 +1284,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Service Needed</label>
+            <label>Service Needed<span class="required-mark">*</span></label>
             <select name="service" required>
               <option value="">— Select a service —</option>
               <option>Driveway / Walkway</option>
@@ -1303,14 +1305,13 @@
               <option>Instagram</option>
               <option>Referral / Word of Mouth</option>
               <option>Saw Your Truck</option>
-              <option>Business Card / Flyer</option>
               <option>Yard Sign</option>
               <option>Door Hanger</option>
               <option>Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Tell us about your project</label>
+            <label>Tell us about your project<span class="required-mark">*</span></label>
             <textarea name="message" placeholder="Describe what needs cleaning, property size, any special concerns..." rows="5" required></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">
