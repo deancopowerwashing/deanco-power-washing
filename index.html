@@ -608,6 +608,45 @@
       color: var(--orange);
     }
 
+    /* ─── FAQ ─── */
+    #faq { background: var(--white); text-align: center; }
+    #faq h2, #faq .section-label { text-align: center; }
+    #faq .section-sub { margin-left: auto; margin-right: auto; text-align: center; }
+
+    .faq-list { max-width: 760px; margin: 0 auto; text-align: left; }
+
+    .faq-item { border-bottom: 1px solid #e5e7ed; }
+    .faq-item:first-child { border-top: 1px solid #e5e7ed; }
+
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px;
+      padding: 22px 4px; text-align: left;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem;
+      color: var(--navy);
+    }
+
+    .faq-icon {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--light-gray); color: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 700; line-height: 1;
+      transition: transform 0.25s ease, background 0.2s, color 0.2s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--orange); color: var(--white); }
+
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      padding: 0 4px;
+    }
+
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 22px; }
+
+    .faq-answer p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
     /* ─── CTA SECTION ─── */
     #cta {
       background: linear-gradient(135deg, var(--orange) 0%, #cf6510 100%);
@@ -921,6 +960,7 @@
       <li><a href="#why-section">About</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -936,6 +976,7 @@
     <a href="#why-section" class="mobile-nav-link">About</a>
     <a href="#gallery" class="mobile-nav-link">Gallery</a>
     <a href="#testimonials" class="mobile-nav-link">Reviews</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <a href="#contact" class="mobile-cta mobile-nav-link">Get a Free Quote →</a>
     <div class="mobile-menu-footer">
@@ -1036,7 +1077,7 @@
           <div class="why-icon">🛡️</div>
           <div>
             <h4>Fully Licensed & Insured</h4>
-            <p>Your property is always protected. We carry full insurance so you never have to worry.</p>
+            <p>Your property is always protected. We carry full insurance so you never have to worry. Certificate of Insurance available on request.</p>
           </div>
         </div>
         <div class="why-item">
@@ -1223,6 +1264,95 @@
     </div>
   </div>
 </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-label">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">Answers to what homeowners ask us most.</p>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you offer free quotes?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes — quotes are always free with no obligation. Fill out our contact form or give us a call, and we'll typically get back to you within 24 hours to set up an estimate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How much does power washing/soft washing cost?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Pricing depends on the size of the area, the level of buildup, and which service you need. We have a $250 minimum job cost, and we provide upfront, transparent pricing before any work begins — no hidden fees.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Is power washing safe for my siding, plants, and pets?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. We use soft washing techniques and eco-friendly, biodegradable cleaning solutions for delicate surfaces like siding and decks, so your property, plants, and pets stay safe throughout the process. We also rinse nearby plants and landscaping before and after applying any cleaning solution, giving extra protection.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What's the difference between power washing and soft washing?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Power washing uses high-pressure water to blast away dirt and grime — ideal for tough surfaces like concrete driveways and walkways. Soft washing uses lower pressure combined with cleaning solutions, which is gentler and better suited for house siding and other delicate surfaces.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do I need to be home during my appointment?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Not necessarily — as long as we have access to the areas being cleaned and a water source, we can complete most jobs without you being present. We'll coordinate the details with you ahead of time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How often should I get my property power washed?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>With a typical soft wash treatment, it can take 2-3 years before mold and algae start to reform — though this varies depending on factors like sun exposure, rainfall, wind, and how shaded your property is. Flat surfaces like driveways and patios tend to hold onto moisture longer, so it's not uncommon for mold or algae to return sooner in those areas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What areas do you service?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We proudly serve Lancaster, Lititz, Ephrata, Elizabethtown, Manheim, Mount Joy, Denver, Adamstown, East Earl, and the surrounding Lancaster County area.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What happens if it rains on my scheduled day?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Depending on the severity and timing of the rain, we may still be able to complete the job as scheduled. If a storm or heavy rainfall is expected, we'll reach out ahead of time to discuss rescheduling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA BANNER -->
   <section id="cta">
@@ -1482,6 +1612,21 @@ function reviewLayout() {
 }
 reviewLayout();
 window.addEventListener('resize', reviewLayout);
+    // ─── FAQ ACCORDION ───
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
     
   </script>
 
