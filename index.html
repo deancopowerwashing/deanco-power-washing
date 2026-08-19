@@ -1064,8 +1064,33 @@
 
     body.menu-open { overflow: hidden; }
   </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1727271108432527');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
 </head>
 <body>
+
+  <!-- Meta Pixel NoScript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1727271108432527&ev=PageView&noscript=1"
+         alt="" />
+  </noscript>
+  <!-- End Meta Pixel NoScript -->
+
 
   <!-- STICKY CALL + TEXT BUTTONS (mobile only) -->
   <div class="sticky-buttons" id="stickyButtons">
@@ -1718,6 +1743,7 @@
     // ─── FORM SUBMISSION ───
     const form = document.getElementById('quoteForm');
     const thankYou = document.getElementById('thankYou');
+    let metaLeadEventFired = false;
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -1725,6 +1751,13 @@
       try {
         const res = await fetch(form.action, { method: 'POST', body: formData });
         if (res.ok) {
+          // Fire the Meta Lead event only after Web3Forms confirms success.
+          // The flag prevents a duplicate event from the same successful submission.
+          if (!metaLeadEventFired && typeof fbq === 'function') {
+            fbq('track', 'Lead');
+            metaLeadEventFired = true;
+          }
+
           form.style.display = 'none';
           thankYou.classList.add('visible');
           thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
